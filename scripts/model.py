@@ -164,9 +164,6 @@ class ModelBuilder:
                  'clf__max_depth': [i + 3 for i in range(2, 6)]},
                 {'clf': [SVC(kernel='rbf', class_weight='balanced')], 'clf__C': SVC_C_grid,
                  'clf__gamma': SVC_gamma_grid},
-                {'clf': [SVC(kernel='poly', class_weight='balanced')], 'clf__C': SVC_C_grid,
-                 'clf__gamma': SVC_gamma_grid,
-                 'clf__degree': list(range(3, 6))},
                 {'clf': [MLPClassifier()], 'clf__hidden_layer_sizes': MLP_hidden_layer_sizes,
                  'clf__activation': MLP_activation,
                  'clf__alpha': [10 ** i for i in range(-1, 3)]}]
